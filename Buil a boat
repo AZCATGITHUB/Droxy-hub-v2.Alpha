@@ -1,0 +1,126 @@
+--This Script Made By AZCATGITHUB
+do
+local Load = game:GetService("CoreGui"):FindFirstChild("Droxy Hub V2 -- Buil a boat")
+if Load then
+  Load:Destroy()
+  end
+end
+wait(0.1)
+    local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/naypramx/Ui__Project/Script/XeNonUi", true))()
+    library:CreateWatermark("--Gui by #AZCATGITHUB / AZCAT") 
+    local CenterHubNo1 = library:CreateWindow("Droxy Hub V2 - Buil a boat",Enum.KeyCode.RightControl)
+    local Tab = CenterHubNo1:CreateTab("Chracter")
+    local Sector1 = Tab:CreateSector("Local Character","left")
+    Sector1:AddLabel("Walk Speed / Jump Power")
+        
+    Sector1:AddSlider("Walk Speed",16,16,999,1,function(x)
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = x
+    end)
+
+    Sector1:AddSlider("Jump Power",50,50,788,1,function(xj)
+    game.Players.LocalPlayer.Character.Humanoid.JumpPower = xj
+    end)
+    
+    local Sector2 = Tab:CreateSector("Ohter Function","left")
+    
+    Sector2:AddToggle("Sit",false,function(t)
+    if t then
+    game.Players.LocalPlayer.Character.Humanoid.Sit = true
+    else
+    game.Players.LocalPlayer.Character.Humanoid.Sit = false
+       end
+    end)
+
+    Sector2:AddToggle("Freeze",false,function(F)
+    if F then
+    game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = true
+    else
+    game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = false
+       end
+    end)
+
+    Sector2:AddButton("Reset Character",function()
+    game.Players.LocalPlayer.Character.UpperTorso:Destroy()
+    game.Players.LocalPlayer.Character.Head:Destroy()
+    game.Players.LocalPlayer.Character.MeshPartAccessory:Destroy()
+    end)
+
+    wait(0.2)
+    local Tab3 = CenterHubNo1:CreateTab("Main")
+    local Sector3 = Tab3:CreateSector("Main","left")
+    Sector3:AddLabel("Auto Gold")
+
+    Sector3:AddToggle("Auto Farm",false,function(g)
+    if g then
+    print(g)
+    else
+    print(g)
+      end
+    end)
+
+    Sector3:AddToggle("Platform Auto Gold",false,function(p)
+    if p then
+    print(p)
+    else
+    print(p)
+      end
+    end)
+    wait(0.2)
+    local Tab4 = CenterHubNo1:CreateTab("Gui Setting")
+    local Sector4 = Tab4:CreateSector("Setting","left")
+    Sector4:AddLabel("Ui Setting")
+
+    Sector4:AddButton("Remove Water Mark [Gui]",function()
+    game.CoreGui.Watermark:Destroy()
+    end)
+
+    Sector4:AddButton("Destroy Gui",function()
+    do
+    local Gui2 = game:GetService("CoreGui"):FindFirstChild("Watermark")
+    if Gui2 then
+     Gui2:Destroy()
+       end
+   end
+    wait(0.001)
+    do
+    local Gui = game:GetService("CoreGui"):FindFirstChild("Droxy Hub V2 - Buil a boat")
+    if Gui then
+     Gui:Destroy()
+       end
+   end
+    end)
+    wait(0.2)
+    local Tab5 = CenterHubNo1:CreateTab("Game")
+    local Sector5 = Tab5:CreateSector("Game","left")
+    Sector5:AddLabel("Game Setting")
+
+    Sector5:AddButton("Remove Trees Boost Your FPS",function()
+    game.Workspace.Trees:Destroy()
+game.Workspace.PineTrees:Destroy()
+game.Workspace.GiantTrees:Destroy()
+game.Workspace.HugeConeTrees:Destroy()
+game.Workspace.Trees:Destroy()
+game.Lighting.ColorCorrection:Destroy()
+    end)
+
+    Sector4:AddButton("Copy Discord Links",function()
+    local StarterGui = game:GetService("StarterGui")
+    StarterGui:SetCore("SendNotification", {
+    Title = "Hey!";
+    Text = "Link Has Copy"
+    })
+    wait(0.001)
+    setclipboard("https://discord.gg/panhwz8N")
+    end)
+
+    Sector2:AddSeperator("Other Setting")
+    Sector1:AddSeperator("Walk / Jump Setting")
+    wait(0.2)
+    local Tab2 = CenterHubNo1:CreateTab("Config") 
+    Tab2:CreateConfigSystem() 
+    wait(0.1)
+local StarterGui = game:GetService("StarterGui")
+StarterGui:SetCore("SendNotification", {
+Title = "Hey!";
+Text = "Alpha Verison V1.00"
+})
